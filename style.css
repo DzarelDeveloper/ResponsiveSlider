@@ -1,0 +1,212 @@
+/* Google Fonts(Poppins) */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+
+* {
+
+  font-family: "Poppins", sans-serif;
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+
+.wrapper {
+
+  height: 100vh;
+
+  width: 100vw;
+
+  position: absolute;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #222;
+
+}
+
+
+
+.wrapper input {
+
+  appearance: none;
+
+}
+
+
+
+.wrapper .dots {
+
+  position: absolute;
+
+  bottom: 70px;
+
+  z-index: 1000;
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+
+
+.wrapper .dots label {
+
+  width: 20px;
+
+  height: 20px;
+
+  background: #fff;
+
+  border-radius: 50px;
+
+  border: 2px solid #222;
+
+  opacity: 0.5;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+
+.wrapper input:nth-child(1):checked ~ .dots label:nth-child(1),
+
+.wrapper input:nth-child(2):checked ~ .dots label:nth-child(2),
+
+.wrapper input:nth-child(3):checked ~ .dots label:nth-child(3),
+
+.wrapper input:nth-child(4):checked ~ .dots label:nth-child(4),
+
+.wrapper input:nth-child(5):checked ~ .dots label:nth-child(5) {
+
+  opacity: 1;
+
+  width: 30px;
+
+}
+
+
+
+.wrapper .slider {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+
+.wrapper .slider .slide {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: var(--img);
+
+  background-size: cover;
+
+  clip-path: circle(0% at 0% 50%);
+
+  transition: 1.5s;
+
+  transition-delay: 0s;
+
+  background-position: left;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: flex-start;
+
+}
+
+
+
+.wrapper .slider .slide:nth-child(even) {
+
+  clip-path: circle(0% at 100% 50%);
+
+  background-position: right;
+
+}
+
+
+
+.wrapper input:nth-child(1):checked ~ .slider .slide:nth-child(1),
+
+.wrapper input:nth-child(2):checked ~ .slider .slide:nth-child(2),
+
+.wrapper input:nth-child(3):checked ~ .slider .slide:nth-child(3),
+
+.wrapper input:nth-child(4):checked ~ .slider .slide:nth-child(4),
+
+.wrapper input:nth-child(5):checked ~ .slider .slide:nth-child(5) {
+
+  clip-path: circle(150% at 50% 50%);
+
+  transition-delay: 1s;
+
+  background-position: center;
+
+}
+
+
+
+.wrapper .slider .slide .content {
+
+  position: relative;
+
+  padding: 50px 50px 120px 80px;
+
+  max-width: 550px;
+
+}
+
+
+
+.wrapper .slider .slide .content h2 {
+
+  color: #fff;
+
+  font-size: 3em;
+
+}
+
+
+
+.wrapper .slider .slide .content p {
+
+  color: #fff;
+
+}
+
